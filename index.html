@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header{
+        background-color: blueviolet;
+        text-align: center;
+        color: white;
+        padding: 20px 0;
+    }
+    .form-group{
+        display: flex;
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    .form-group input[type=text]{
+        flex: 1;
+        height: 30px;
+        padding-left: 20px;
+    }
+    .lista-produto-single{
+        padding: 10px 0;
+        margin: 20px 0;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+    }
+    .lista-produto-single h3{
+        flex: 1;
+        padding: 0 20px;
+
+    }
+    h3.price-produto{
+        font-size: 17px;
+    }
+    h3.price-produto > span{
+        background-color: blue;
+        padding: 8px 10px;
+        border-radius: 20px;
+        color: white;
+    }
+    .soma-produto{
+        margin: 20px;
+    }
+        
+
+</style>
+<title>Lista de Supermercado</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Lista de Supermercado</h1>
+    </header>
+
+    <div class="form-group">
+         <input type="text" class="form-control" name="nome_produto" placeholder="Nome do Produto">
+         <input type="text" class="form-control" name="valor_produto" placeholder="Preço do Produto">
+         <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+
+    <div class="lista-produtos"></div>  
+        
+    <div class="soma-produto">
+        <h1>total: R$ 00,00</h1>
+    </div>
+
+    <button type="submit" name="limpar" style="margin: 20px;" class="btn btn-success">Limpar</button>
+     
+    <script src="supermercado.js"></script>        
+
+</body>
+</html>
